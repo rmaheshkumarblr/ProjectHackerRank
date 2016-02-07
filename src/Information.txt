@@ -1,0 +1,99 @@
+Java is an object oriented programming language.
+Class is a blue print with tools(properties and methods). Instance is an object created from the blueprint.
+Class has properties(Attributes of the tree) and methods(Change the properties).
+Each line needs to end with a semi-colon. (End of line)
+Default for decimal is double(not float)
+camelCasing is preferred.
+Primitive Data Type and Referenced Data Type (Arrays,Queues,Linked Lists, Stacks)
+Only for the referenced data type if we change for the referenced variable, it affects all the variables that are referencing the referenced variable.
+For primitive data type, if it assigned to another variable and it is change, the referencing variable has no impact.
+char single quotes
+string double quotes
+Generally when a variable is created the follow occurs: Declare , Allocate , Initialize
+Create an instance of an object with custom values and properties implies we need a constructor.
+Constructor name must match the class name.
+Function / Constructor have parameter. When the function/constructor are called, we pass the value called arguments which take the place of the parameter.
+The if condition output must always be true or false in Java unlike other languages where it can be 1 or 0 or any number
+^ in java does not mean to raise to a power. It means XOR.
+// String format below will add leading zeros (the %0 syntax) to the number above.
+//The length of the formatted string will be 7 characters.
+String formatted = String.format("%07d", number);
+Getter and setter to change the property as required. Used first just after the constructor.
+Boolean Operators: and / or / not
+A function made static in the class makes it a class method rather than a class function. ( No instance needed to use this function )
+Loops approximately are repeating if statements
+The size of an array is fixed once provided or allocated with a fix number, we can't increase its size unless we create a new array of greater length.
+A newly created int array has all its value set to 0 by default if only allocation is done.
+//Arrays.sort(intArray3); -->> In-built functions - It sorts in the source ( no extra copy is made ) -->> Destructive programming
+Interfaces - List of methods that anything that implements the interface must have.
+Dictionaries - Like arrays ( fixed length ) but it has key and value pairs. We can insert / find and delete unlike an array. The value can be anything ( datatype of value does not matter )
+Shortcuts for System.out.println() : sout , soutm , soutv , soutp
+Map is an interface. Hashmap is a type of Map
+boolean is not a reference data type( no pointer in memory ), Boolean is a object with type boolean(primitive) and it has a reference ( pointer in memory )
+Recursion is the process of defining a function or calculating a number by the repeated application of an algorithm.
+Recursion has a 1) Base Case 2) Recursive Case
+Private methods within a class can only be accessed by other methods within the class.
+Only one main must exist between multiple classes when they are used together.
+Inheritance in Java: Allows to build new classes from existing classes , reuse code.
+Parent is the superclass, Child is the subclass ( Object is the superclass of all in Java )
+Object is the superclass, Class is the child of the object(Class is the parent of the another class), Another class is the child of the Class. Object is a super class of everything that is created
+Use extends to make a class inherit from another class
+To call the constructor of the child class, we need to call the constructor of the parent class first. For this we use the "super()" operator in the constructor of the child ( Note it must be the 1st statement in the constructor of the child class )
+What happens if a new instance of the parent class is created with the new operator of the child class.
+Compiler won't complain because the child is an subclass of the parent class. The object won't have access to child class though
+Basically, a subclass can be generalized to a superclass. A superclass cannot become a more specific subclass.
+When a local integer is declared, its default value is not 0 or null. I have still not figured out how to figure out if it is set or not. Suggested method is to assign a value to the integer that is never used or relevant to the problem example int i = -1 ; when all the number are above -1
+Abstract class in Java are class with at least one abstract method, a method declared without an implementation. They can have abstract and non-abstract methods. They cannot be intialized straight from the class as some of the methods are not implemented. Abstract methods don't have a statement.
+How do we use abstract classes if we can't initialize them? We subclass them. Each sub class abstract methods implements them individually.
+Objective is to create a sub class from a super class with certain common properties but never use the superclass directly.
+Overriding method can be used using the abstract class. Both abstract and non-abstract classes can override methods. Implement the same method in the subclass and it takes precedence over the superclass.
+Difference between Abstract Classes and overriding methods: Classes that extend abstract classes must implement abstract methods or be abstract themselves.
+With Abstract classes, a method may not be defined. The program does not know what to do but with overriding there is an implementation at a superclass level.
+Casting  - Converting the data type to another data type. Casting helps to access the subclass methods from the superclass.
+When we cast an superclass from a subclass, the overridden methods of the subclass are applicable to superclass.
+A group of similar classes is called a package. ( Built-in , User-Defined )
+Java - lang, util, io, net, awt. We need to import all packages other than java.lang .Using import package.* can increase compliation time as all the classes under the package will be imported.
+Data Structures: Array-Index and Value, Hashmap/Dictionaries - Key and Value
+What is a linked list: It is a data structure that consists of a group of nodes which represent a sequence together.(Example: Train - n compartments(nodes)) -- Order matters, space is dynamic. Composed of data ,it has Reference to next node. Ability to add/remove/count/retrieve data from nodes, isempty etc..
+Generics allows the type of data to be anything
+Abstraction:  We know it works, but we don't know how it works. Doubly linked list (We can iterate both ways - from head or tail )
+Exceptions - Within a method there is an error, it create an error object in runtime. - Exception object - contains information of the error type, state of the program and , how we get error message in console. -->> The whole of this is called throwing an error.
+Exception is a problem that arises during the execution of your program and disrupts your program. As a result, the program terminates anad exits abnormally.
+There are two ways to handle these: 1) Checked Exceptions - Syntax error - Occurs at compile time  2) Unchecked Exceptions - Logic error - Occurs at runtime
+try-catch block - Safe Guard against bad inputs. There can be multiple catch block for every try.
+If we don't handle the error, we must declare it via the "throws" keyword.
+If an exception migh arise, we could do one of the following: 1) use try-catch block or 2) Use the keyword "Throws" in the method signature, which states that we'll handle this error higher up in the program.
+As a programmer we can also throw error. We can throw an error inside the method using the "throw" when we know something is wrong with the program ( even if Java doesn't know something is wrong)
+Java's exceptions only arise if there are 1) Syntax erros, 2)Logic errors/ bad access errors.
+java.lang -> Object -> Throwable -> Errors
+                                 -> Exceptions -> Runtime Exceptions and Other Exceptions.
+What happens if we have throw but no try or catch ? It is going to error out.
+DataStructures: Arrays, Dictionaries, LinkedList->Hold many objects, Queues(FIFO) , Stacks(LIFO)
+Queues: Using LinkedList - isempty , size, enqueue, dequeue, peek
+Interfaces - A collection of abstract methods. Template of functionality ( No implementations and ano constructors, just the function declaration ).
+Any declaration of variable in Interfaces is static and final. We can't change it at any instance of time. Interface implementations must have the same signature too.
+We implement an interface, extend a class. There can be no constructor within an interface.
+Java does not have pointers. Variables that sore the address of another variable in memory. They are implemented internally.
+An enum is a special datatype that allow for a variable to be one of a set of pre-defined constants.
+Aliases in code is nothing but two variable pointing to the same location. Changing the content for one will change for another variable as well.
+Garbage collection in Java: 1) Dellocates memory & resuses the space for something else 2) Helps us not run out of memory. 3) When objects can no longer be accessed, they are removed by the garbage collector.
+JVM : Java Virtual Machine: Abstract computing machine that allows a computer to run Java Programs.
+3 Ideas: 1) Specification - what is required to run the program , 2) Implementation - a program that meets these specifications 3) Instance - An implementation in action. It is running on the system or computer and the program in compiled into byte code and it runs/compiles it.
+Documentation - The reason we don't really need to know anything. We need to know how to lookup things.
+Generics:  Allow you to generalize what you put in your data structures(containers of data). Java is a strongly typed language. You cannot change the data type once it is declared for a variable.
+Generics allow a type or a method to operate on objects of various types while providing compile time type safety.
+Note if Generics are used we use objects so in the main function we have to use Integer which is a class instead of int which is a primitive data type.
+Advantages of generics is that we allow any type of data to be passed onto a single function. The disadvantage is that we cannot use any data type specific methods within the function as it's type will not be known until real time. We can only use the object methods in such cases.
+Everywhere we used generics and declared a variable of type generic it is compulsory to use the data type during the declaration even if it is a temporary variable.
+More Data Structures: Graphs and Trees. root , leaf , node. Top level are called parent, bottom level are called children. Node as child, Subtree as child, No child - leaf. Heap - Root has special relationship with children, but children have no relationship with each other.
+Min-Heap: Smaller data higher in the tree.Children must be higher than parent.
+Max-Heap: Largest data is the root, Children must be smaller than parent. Array representation, to get children of a parent, multiply, it's index by 2 and multiply by 2+1. Child of p are p*2 and p*2+1. Parent of child c are c/2.
+Binary Search Tree(BST)- Relation between children - Root is middle node. Left child is less than the parent and the Right child is more than the parent.  Get parent in array form: c/2. To get left child: p*2 , To get right child p*2+1
+A Tree interface implemented by 1)Non-Empty BST - A class representing non-empty binary search trees 2) EmptyBST - A class representing empty binary search trees. Useful for Path Finding Algorithms ( Breadth First Search, Depth First Search )
+What makes one version of code better than another? 1) Efficiency 2) Space 3)Elegance ( Space - Time Tradeoff ) -- Speed is the most important ( for the most part )
+Running time: How fast a given function is based on input n. How fast the code runs in proportion to its input.
+Complexities: Upper Bound (O(n))
+    O(1)->Constant doesn't depend on input.
+    O(log(n))->Logarithmic
+    O(n)->Linear
+    O(n2)->Quadratic
